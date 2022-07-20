@@ -5,8 +5,8 @@ import FeatherIcon from "feather-icons-react";
 export interface IconButtonProps {
   featherIconName: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
-  variant: "primary" | "default" | "dark" | "alert";
-  size: "default" | "small";
+  variant?: "primary" | "default" | "dark" | "alert";
+  size?: "default" | "small";
 }
 
 const IconButton: React.FC<IconButtonProps> = ({
@@ -25,6 +25,9 @@ const IconButton: React.FC<IconButtonProps> = ({
   );
 };
 
-IconButton.defaultProps = {};
+IconButton.defaultProps = {
+  variant: "default",
+  size: "default",
+};
 
 export default IconButton;

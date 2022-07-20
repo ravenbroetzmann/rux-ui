@@ -1,0 +1,9 @@
+@use '../../sass/vars.scss' as *;
+
+label {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    line-height: 127%;
+    margin-bottom: 2rem;
+}
