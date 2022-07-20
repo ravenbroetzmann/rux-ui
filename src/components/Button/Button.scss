@@ -12,6 +12,7 @@ button {
     justify-content: center;
     border-radius: 0.5rem;
     cursor: pointer;
+    color: $dark-default;
 
     &.size-small {
         height: 3.5rem;
@@ -24,13 +25,16 @@ button {
 
     &.variant-primary {
         background-color: $primary-default;
+        color: $default-100
     }
 
     &.variant-dark {
         background-color: $dark-default;
+        color: $default-100
     }
 
     &.variant-alert {
         background-color: $error-default;
+        color: $default-100
     }
 }

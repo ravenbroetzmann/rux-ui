@@ -1,0 +1,23 @@
+@use '../../sass/vars.scss' as *;
+
+div.editor-wrapper {
+    .text-wrapper {
+        width: 31rem;
+        background: $default-200;
+        min-height: 15rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+        padding: 1rem;
+    }
+
+    .editor-toolbar {
+        width: 31rem;
+        background: $default-300;
+        height: 5rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+}
+
+.ProseMirror {
+    outline: none;
+    margin-bottom: 1rem;
+}
