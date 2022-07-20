@@ -1,14 +1,13 @@
 # Hooks
 
-## useToggle
+## useRuxState
+
+just a diffrent syntax for useState
 
 ### Usage
 
 ```
-
-const toggle = useToggle(val1, val2); // default true and false
-toggle.set(index: 0 | 1) // set the value to val1 or val2
-toggle.toggle() //toggle the value
-toogle.curent() // get the current value
-
+const state = useRuxState<Type>(defaultValue)
+state.set(value: Type)
+const get: Type = state.get()
 ```
