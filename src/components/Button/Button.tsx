@@ -16,7 +16,10 @@ const Button: React.FC<ButtonProps> = ({
   children,
 }) => {
   return (
-    <button className={`size-${size} variant-${variant}`} onClick={onClick}>
+    <button
+      className={`button size-${size} variant-${variant}`}
+      onClick={onClick}
+    >
       <P style="bold" color={variant === "default" ? "dark" : "light"}>
         {children}
       </P>

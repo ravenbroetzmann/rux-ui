@@ -1,6 +1,12 @@
 @use '../../sass/vars.scss' as *;
 
 button {
+    outline: none;
+    border: none;
+    background-color: unset;
+}
+
+button.button {
     min-width: 13rem;
     height: 5rem;
     outline: none;
@@ -13,6 +19,10 @@ button {
     border-radius: 0.5rem;
     cursor: pointer;
     color: $dark-default;
+
+    p {
+        font-size: $size-label;
+    }
 
     &.size-small {
         height: 3.5rem;

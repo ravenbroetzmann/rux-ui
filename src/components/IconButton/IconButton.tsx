@@ -17,7 +17,7 @@ const IconButton: React.FC<IconButtonProps> = ({
 }) => {
   return (
     <button
-      className={`icon-button size-${size} variant-${variant}`}
+      className={`button icon-button size-${size} variant-${variant}`}
       onClick={onClick}
     >
       <FeatherIcon icon={featherIconName} />
