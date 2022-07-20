@@ -3,4 +3,5 @@
 the Designsystem developed by Raven Brötzmann
 Used in all Products created by RUX.INC
 
-All Documentation is in the Storybook
+Component Documentation found in Storybook
+Hooks Documentation found in `docs/hooks.md`

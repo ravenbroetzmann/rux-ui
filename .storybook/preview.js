@@ -9,3 +9,11 @@ export const parameters = {
     },
   },
 };
+
+export const decorators = [
+  (Story) => (
+    <div className="storybook-container-decorator">
+      <Story />
+    </div>
+  ),
+];

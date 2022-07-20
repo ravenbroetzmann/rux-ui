@@ -12,7 +12,17 @@
 
 html,
 body {
+    background: $default-100;
+}
+
+.storybook-container-decorator {
     background-color: $default-100;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
 }
 
 .light {
