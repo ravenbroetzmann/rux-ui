@@ -1,0 +1,25 @@
+@use '../../sass/vars.scss' as *;
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: 0.05em;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: $size-h1;
+}
+
+h2 {
+    font-size: $size-h2;
+}
+
+h3 {
+    font-size: $size-h3;
+}
+
+h4 {
+    font-size: $size-h4;
+}

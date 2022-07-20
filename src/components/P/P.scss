@@ -1,0 +1,12 @@
+@use '../../sass/vars.scss' as *;
+
+p {
+    font-size: $size-p;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+
+    &.bold {
+        font-weight: 800;
+
+    }
+}
