@@ -3,8 +3,8 @@ import "./P.scss";
 
 export interface PProps {
   children: string;
-  color: "primary" | "dark" | "light";
-  style: "bold" | "default";
+  color?: "primary" | "dark" | "light";
+  style?: "bold" | "default";
 }
 
 const P: React.FC<PProps> = ({ children, color, style }) => {

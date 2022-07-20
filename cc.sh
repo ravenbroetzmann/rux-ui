@@ -50,7 +50,6 @@ const Template: ComponentStory<typeof $NAME> = (args) => <$NAME {...args} />;
 
 # sass
 echo "@use '../../sass/vars.scss' as *;
-// start styling you $NAME Component
 " >> $STYLE_FILE
 
 echo "created $NAME in /src/components"

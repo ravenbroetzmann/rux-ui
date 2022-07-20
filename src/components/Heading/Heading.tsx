@@ -2,7 +2,7 @@ import React from "react";
 import "./Heading.scss";
 
 export interface HeadingProps {
-  type: "h1" | "h2" | "h3" | "h4";
+  type?: "h1" | "h2" | "h3" | "h4";
   children: string;
   color?: "primary" | "dark" | "light";
 }
