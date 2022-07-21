@@ -4,8 +4,8 @@ import "./Button.scss";
 
 export interface ButtonProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
-  variant: "primary" | "default" | "dark" | "alert";
-  size: "default" | "small";
+  variant?: "primary" | "default" | "dark" | "alert";
+  size?: "default" | "small";
   children: string;
 }
 
