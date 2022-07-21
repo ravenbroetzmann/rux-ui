@@ -23,15 +23,10 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ onChange }) => {
     content: "<p></p>",
   });
 
-  const bold = useRuxToggle(false);
-  const italic = useRuxToggle(false);
-
   const toggleBold = () => {
-    bold.toggle();
     editor?.chain().focus().toggleBold().run();
   };
   const toggleItalic = () => {
-    italic.toggle();
     editor?.chain().focus().toggleItalic().run();
   };
 
@@ -39,13 +34,13 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ onChange }) => {
     <div className="editor-wrapper">
       <div className="editor-toolbar">
         <IconButton
-          variant={bold.current() ? "primary" : "default"}
+          variant={editor?.isActive("bold") ? "primary" : "default"}
           size="small"
           featherIconName="bold"
           onClick={toggleBold}
         />
         <IconButton
-          variant={italic.current() ? "primary" : "default"}
+          variant={editor?.isActive("italic") ? "primary" : "default"}
           size="small"
           featherIconName="italic"
           onClick={toggleItalic}
