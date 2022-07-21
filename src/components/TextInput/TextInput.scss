@@ -21,6 +21,7 @@ input {
 
     &::placeholder {
         color: $default-300;
+        font-family: $font-primary;
     }
 
     &.not-valid {
