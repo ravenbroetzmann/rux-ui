@@ -12,7 +12,7 @@ export default {
 
 const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 
-export const ButtonAndTitle: ComponentStory<typeof Card> = (args) => (
+export const TitleSubTitleAndEmail: ComponentStory<typeof Card> = (args) => (
   <Card>
     <div>
       <Heading type="h3">John Doe</Heading>

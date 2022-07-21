@@ -3,7 +3,7 @@ import P from "../P/P";
 import "./Button.scss";
 
 export interface ButtonProps {
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   variant?: "primary" | "default" | "dark" | "alert";
   size?: "default" | "small";
   children: string;

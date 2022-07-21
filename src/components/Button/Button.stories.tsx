@@ -14,6 +14,7 @@ Default.args = {
   children: "Click me",
   size: "default",
   variant: "default",
+  onClick: () => {},
 };
 export const Primary = Template.bind({});
 Primary.args = {
