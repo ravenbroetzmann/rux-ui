@@ -4,7 +4,7 @@ import P from "../P/P";
 import "./Label.scss";
 
 export interface LabelProps {
-  type: "primary" | "light" | "dark";
+  type?: "primary" | "light" | "dark";
   children: string;
 }
 

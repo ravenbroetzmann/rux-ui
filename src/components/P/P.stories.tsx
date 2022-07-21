@@ -14,6 +14,7 @@ Default.args = {
   color: "dark",
   children: "Hello There",
   style: "default",
+  size: "default",
 };
 
 export const Bold = Template.bind({});

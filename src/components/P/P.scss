@@ -6,6 +6,10 @@ p {
     letter-spacing: 0.05em;
     line-height: 127%;
 
+    &.size-label {
+        font-size: $size-label;
+    }
+
     &.bold {
         font-weight: 800;
 

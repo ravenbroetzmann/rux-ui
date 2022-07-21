@@ -36,3 +36,10 @@ Alert.args = {
   variant: "alert",
   featherIconName: "alert-circle",
 };
+
+export const TextLabel = Template.bind({});
+TextLabel.args = {
+  ...Default.args,
+  featherIconName: undefined,
+  textLabel: "1",
+};

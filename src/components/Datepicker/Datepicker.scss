@@ -1,2 +1,12 @@
 @use '../../sass/vars.scss' as *;
 
+.datpicker-wrapper .display {
+    width: 31rem;
+    background: $default-200;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+
+}
