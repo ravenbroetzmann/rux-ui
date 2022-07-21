@@ -39,7 +39,9 @@ div.alert {
     &.warning {
         background: $warning-default;
 
-        color: $default-100 button {
+        color: $default-100;
+
+        button {
             color: $default-100;
         }
     }
