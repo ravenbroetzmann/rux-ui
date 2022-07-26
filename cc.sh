@@ -45,3 +45,5 @@ export default {
 
 const Template: ComponentStory<typeof $NAME> = (args) => <$NAME {...args} />;
 " >> $STORIES_FILE
+
+echo "done"
