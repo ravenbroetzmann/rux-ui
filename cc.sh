@@ -1,6 +1,7 @@
-#!/bin/bash   
+#!/bin/bash 
 
-### THIS FILES CREATES THE BOILERPLATE FOR A REACT + STORYBOOK COMPONENTS
+# Run this file to create an React Component Boilerplate along with Storybook support
+# Run: bash cc.sh <ComponentName>
 
 # VARS
 NAME="${1}"
@@ -8,10 +9,21 @@ COMPONENT_FILE="$NAME.tsx"
 STORIES_FILE="$NAME.stories.tsx"
 INTERFACE_NAME="${1}Props"
 
-echo "creating $NAME ..."
+# check if component name is given
+if [ -z $NAME ]
+then printf "\nUSAGE:  \nbash cc.sh <component-name>\n\n"; exit
+fi
 
-# Create folder for Component
+# cd to component dir
 cd "src/components"
+
+# check if dir already exists
+if [ -d $NAME ]
+then echo "The Directory $NAME already exists"; exit
+fi
+
+echo "creating..."
+# create folder
 mkdir $NAME
 cd $NAME
 
@@ -46,4 +58,4 @@ export default {
 const Template: ComponentStory<typeof $NAME> = (args) => <$NAME {...args} />;
 " >> $STORIES_FILE
 
-echo "done"
+echo "done!"

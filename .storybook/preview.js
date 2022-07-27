@@ -13,7 +13,9 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <RuxContext>
-      <Story />
+      <div className="w-full rounded-lg bg-default-light dark:bg-default-dark p-10 transition-all duration-500">
+        <Story />
+      </div>
     </RuxContext>
   ),
 ];

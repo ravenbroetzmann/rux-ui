@@ -1,8 +1,11 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: [
     "./src/components/**/*.{tsx,ts}",
     "./src/utils/*.{ts,tsx}",
     "./src/context/*.{ts,tsx}",
+    "./.storybook/*.{js,ts}",
   ],
   darkMode: "class",
   theme: {
@@ -12,26 +15,20 @@ module.exports = {
     },
     extend: {
       colors: {
-        /**default: "#F3F4F6",
-        primary: "#3277a9",
-        secondary: "#CBD5E0",
-        secondaryDarker: "#c3d0de",
-        dark: "#404040",
-        darkLighter: "#939696",*/
         default: {
-          dark: "gray-700",
-          light: "gray-100",
-          "light-darker": "gray-300",
-          "dark-lighter": "gray-500",
+          dark: colors.gray[700],
+          light: colors.gray[200],
+          "light-darker": colors.gray[300],
+          "dark-lighter": colors.gray[600],
         },
         primary: {
-          dark: "sky-400",
-          light: "sky-600",
+          dark: colors.sky[400],
+          light: colors.sky[600],
         },
 
         neutral: {
-          dark: "gray-100",
-          light: "gray-700",
+          dark: colors.gray[200],
+          light: colors.gray[700],
         },
       },
       width: {

@@ -3,21 +3,27 @@ import { createContext, ReactNode } from "react";
 import { useToggle } from "../hooks/useToggle";
 import type { toggle } from "../hooks/useToggle";
 
-interface RuxContext {
+export interface RuxContextValues {
   darkmode: toggle;
 }
 
-const context = React.createContext<RuxContext | {}>({});
+const context = React.createContext<RuxContextValues | null>(null);
 
 export default function RuxContext({ children }: { children: ReactNode }) {
-  const darkmode = useToggle();
-  const contextValue: RuxContext = {
+  const darkmode = useToggle(true);
+  const contextValue: RuxContextValues = {
     darkmode,
   };
 
   return (
     <context.Provider value={contextValue}>
-      <div className={darkmode.current ? "dark" : "p-0 m-0 "}>{children}</div>
+      <div
+        className={`${
+          darkmode.current ? "dark" : ""
+        } transition-all duration-500`}
+      >
+        {children}
+      </div>
     </context.Provider>
   );
 }
