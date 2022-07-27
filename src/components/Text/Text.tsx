@@ -6,14 +6,17 @@ export interface TextProps {
   type: "normal" | "bold";
   style?: ruxStyle;
   children: string;
+  className?: string;
 }
 
-const Text: React.FC<TextProps> = ({ type, style, children }) => {
+const Text: React.FC<TextProps> = ({ type, style, children, className }) => {
   return (
     <p
       className={`${type === "normal" ? "font-normal" : "font-bold"} ${
         textSizes.normal
-      } ${textColors[style || "dark"]} font-roboto tracking-wider`}
+      } ${
+        textColors[style || "dark"]
+      } font-roboto tracking-wider w-full ${className}`}
     >
       {children}
     </p>

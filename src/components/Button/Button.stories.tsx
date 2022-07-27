@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   variant: "big",
-  style: "default",
+  style: "secondary",
   children: "Click Me",
 };
 
@@ -21,10 +21,10 @@ Primary.args = {
   ...Default.args,
   style: "primary",
 };
-export const Secondary = Template.bind({});
-Secondary.args = {
+export const Light = Template.bind({});
+Light.args = {
   ...Default.args,
-  style: "secondary",
+  style: "default",
 };
 export const Dark = Template.bind({});
 Dark.args = {

@@ -9,3 +9,18 @@ export const parameters = {
     },
   },
 };
+
+export const decorators = [
+  (Story) => (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "#F3F4F6",
+      }}
+    >
+      <Story />
+    </div>
+  ),
+];

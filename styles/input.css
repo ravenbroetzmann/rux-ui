@@ -20,6 +20,10 @@
   font-weight: 400;
 }
 
+html {
+  background: #f3f4f6;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
