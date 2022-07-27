@@ -1,4 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@500;700;900&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@500;700;900&display=swap");*/
+@font-face {
+  font-family: "Roboto";
+  src: url("./Roboto/Roboto-Black.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./Roboto/Roboto-Bold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./Roboto/Roboto-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./Roboto/Roboto-Regular.ttf");
+  font-weight: 400;
+}
 
 @tailwind base;
 @tailwind components;

@@ -27,4 +27,4 @@ export const spacing = {
   normal: "0",
 };
 
-export const defaultHeading = "text-left tracking-wider font-roboto font-black";
+export const classNames = (classNameArr: string[]) => classNameArr.join(" ");

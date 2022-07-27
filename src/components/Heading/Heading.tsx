@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  defaultHeading,
-  textColors,
-  textSizes,
-  spacing,
-} from "../../utils/tailwindHelpers";
+import { textColors, textSizes, spacing } from "../../utils/tailwindHelpers";
 import { ruxStyle } from "../../utils/variantTypes";
 
 export interface HeadingProps {
@@ -13,6 +8,7 @@ export interface HeadingProps {
   children: string;
 }
 const Heading: React.FC<HeadingProps> = ({ type, style, children }) => {
+  const defaultHeading = "text-left tracking-wider font-roboto font-black";
   const classNames = [
     defaultHeading,
     textSizes[type || "h1"],
