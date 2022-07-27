@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useRuxContext } from "../../context/RuxContext";
 import { bgColors, classNames } from "../../utils/tailwindHelpers";
 import { ruxStyle } from "../../utils/variantTypes";
 import Text from "../Text/Text";
@@ -16,6 +17,10 @@ const Button: React.FC<ButtonProps> = ({
   children,
   onClick,
 }) => {
+  const ruxContext = useRuxContext();
+  useEffect(() => {
+    console.log(ruxContext);
+  }, [ruxContext]);
   return (
     <button
       onClick={onClick}

@@ -1,5 +1,5 @@
 import "../styles/output.css";
-
+import RuxContext from "../src/context/RuxContext";
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -12,15 +12,8 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        background: "#F3F4F6",
-      }}
-    >
+    <RuxContext>
       <Story />
-    </div>
+    </RuxContext>
   ),
 ];
