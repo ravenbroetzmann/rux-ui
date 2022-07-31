@@ -4,6 +4,7 @@
 # Run: ./create-comp.sh ...component-names
 # E.G ./create-comp.sh Button Modal Menu
 
+# check if at least one arg is given
 set -e
 if [ "$#" -lt 1 ]
 then
