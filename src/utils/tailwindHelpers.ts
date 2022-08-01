@@ -8,13 +8,13 @@ export const textSizes = {
 
 export const bgColors = {
   primary: "bg-primary",
-  secondary: "bg-default",
+  secondary: "bg-secondary",
   dark: "bg-dark",
   default: "bg-default",
 };
 export const textColors = {
   primary: "text-primary",
-  secondary: "text-default",
+  secondary: "text-secondary",
   dark: "text-dark",
   default: "text-default",
 };
