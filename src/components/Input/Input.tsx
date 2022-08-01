@@ -19,7 +19,7 @@ const Input: React.FC<InputProps> = ({
     <input
       defaultValue={defaultValue || undefined}
       type={type}
-      className="bg-default-light-darker text-neutral-light dark:text-neutral-dark dark:bg-default-dark-lighter border-none rounded-md font-bold outline-none py-4 px-6 min-w-[25rem]"
+      className="bg-default-light-darker text-neutral-light dark:text-neutral-dark dark:bg-default-dark-lighter border-none rounded-md font-bold outline-none py-4 px-6 w-full"
       placeholder={placeholder}
       name={name}
       onChange={onChange}

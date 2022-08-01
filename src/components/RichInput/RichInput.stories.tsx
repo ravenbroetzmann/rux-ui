@@ -11,3 +11,7 @@ const Template: ComponentStory<typeof RichInput> = (args) => (
   <RichInput {...args} />
 );
 export const Default = Template.bind({});
+export const WithDefaultValue = Template.bind({});
+WithDefaultValue.args = {
+  defValue: "<p>Hello <strong>World</strong></p>",
+};
