@@ -11,23 +11,23 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: "Click me",
-  size: "default",
-  variant: "default",
-  onClick: () => {},
+  variant: "big",
+  style: "default",
+  children: "Click Me",
 };
+
 export const Primary = Template.bind({});
 Primary.args = {
   ...Default.args,
-  variant: "primary",
+  style: "primary",
+};
+export const Secondary = Template.bind({});
+Secondary.args = {
+  ...Default.args,
+  style: "secondary",
 };
 export const Dark = Template.bind({});
 Dark.args = {
   ...Default.args,
-  variant: "dark",
-};
-export const Alert = Template.bind({});
-Alert.args = {
-  ...Default.args,
-  variant: "alert",
+  style: "dark",
 };

@@ -6,7 +6,6 @@
 NAME="${1}"
 COMPONENT_FILE="$NAME.tsx"
 STORIES_FILE="$NAME.stories.tsx"
-STYLE_FILE="$NAME.scss"
 INTERFACE_NAME="${1}Props"
 
 echo "creating $NAME ..."
@@ -17,12 +16,11 @@ mkdir $NAME
 cd $NAME
 
 # Create Files
-touch $COMPONENT_FILE $STORIES_FILE $STYLE_FILE
+touch $COMPONENT_FILE $STORIES_FILE
 
 # write boiler code
 # TSX
 echo "import React from 'react';
-import './$STYLE_FILE';
 
 export interface $INTERFACE_NAME {}
 
@@ -48,8 +46,4 @@ export default {
 const Template: ComponentStory<typeof $NAME> = (args) => <$NAME {...args} />;
 " >> $STORIES_FILE
 
-# sass
-echo "@use '../../sass/vars.scss' as *;
-" >> $STYLE_FILE
-
-echo "created $NAME in /src/components"
+echo "done"

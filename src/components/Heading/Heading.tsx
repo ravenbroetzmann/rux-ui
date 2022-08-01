@@ -1,22 +1,33 @@
 import React from "react";
-import "./Heading.scss";
+import { textColors, textSizes, spacing } from "../../utils/tailwindHelpers";
+import { ruxStyle } from "../../utils/variantTypes";
 
 export interface HeadingProps {
   type?: "h1" | "h2" | "h3" | "h4";
+  style?: ruxStyle;
   children: string;
-  color?: "primary" | "dark" | "light";
 }
+const Heading: React.FC<HeadingProps> = ({ type, style, children }) => {
+  const defaultHeading = "text-left tracking-wider font-roboto font-black";
+  const classNames = [
+    defaultHeading,
+    textSizes[type || "h1"],
+    textColors[style || "default"],
+    `my-${spacing[type || "h1"]}`,
+  ].join(" ");
 
-const Heading: React.FC<HeadingProps> = ({ type, children, color }) => {
-  if (type === "h1") return <h1 className={color}>{children}</h1>;
-  if (type === "h2") return <h2 className={color}>{children}</h2>;
-  if (type === "h3") return <h3 className={color}>{children}</h3>;
-  return <h4 className={color}>{children}</h4>;
+  console.log(classNames);
+
+  if (type === "h1") return <h1 className={classNames}>{children}</h1>;
+  else if (type === "h2") return <h2 className={classNames}>{children}</h2>;
+  else if (type === "h3") return <h3 className={classNames}>{children}</h3>;
+  else return <h4 className={classNames}>{children}</h4>;
 };
 
 Heading.defaultProps = {
+  style: "primary",
   type: "h1",
-  color: "dark",
+  children: "Hello There",
 };
 
 export default Heading;

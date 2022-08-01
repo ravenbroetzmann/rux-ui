@@ -1,36 +1,47 @@
-import React, { MouseEventHandler } from "react";
-import P from "../P/P";
-import "./Button.scss";
+import React from "react";
+import { bgColors, classNames } from "../../utils/tailwindHelpers";
+import { ruxStyle } from "../../utils/variantTypes";
+import Text from "../Text/Text";
 
 export interface ButtonProps {
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-  variant?: "primary" | "default" | "dark" | "alert";
-  size?: "default" | "small";
+  style?: ruxStyle;
+  variant?: "big" | "small";
   children: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const Button: React.FC<ButtonProps> = ({
-  onClick,
+  style,
   variant,
-  size,
   children,
+  onClick,
 }) => {
   return (
     <button
-      className={`button size-${size} variant-${variant}`}
       onClick={onClick}
+      className={classNames([
+        bgColors[style || "default"],
+        "rounded-lg",
+        "transition-all duration-500",
+        variant === "big" ? "py-3 px-5 " : "py-2 px-3",
+      ])}
     >
-      <P style="bold" color={variant === "default" ? "dark" : "light"}>
+      <Text
+        type="bold"
+        style={
+          style === "default" || style === "secondary" ? "dark" : "default"
+        }
+      >
         {children}
-      </P>
+      </Text>
     </button>
   );
 };
 
 Button.defaultProps = {
-  onClick: (event) => {},
-  variant: "default",
-  size: "default",
+  onClick: (e) => console.log("clicked"),
+  style: "default",
+  variant: "big",
 };
 
 export default Button;

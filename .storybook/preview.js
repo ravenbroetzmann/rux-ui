@@ -1,4 +1,4 @@
-import "../src/sass/main.scss";
+import "../styles/output.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -9,11 +9,3 @@ export const parameters = {
     },
   },
 };
-
-export const decorators = [
-  (Story) => (
-    <div className="storybook-container-decorator">
-      <Story />
-    </div>
-  ),
-];
