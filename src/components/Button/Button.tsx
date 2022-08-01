@@ -1,8 +1,8 @@
 import React from 'react';
 
-  export interface HeadingProps {}
+  export interface ButtonProps {}
 
-  const Button: React.FC<HeadingProps> = ({}) => {
+  const Button: React.FC<ButtonProps> = ({}) => {
     return <div></div>;
   };
 

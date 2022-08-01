@@ -10,11 +10,4 @@ export default {
 const Template: ComponentStory<typeof ColorPalete> = (args) => (
   <ColorPalete {...args} />
 );
-export const Light = Template.bind({});
-Light.args = {
-  mode: "light",
-};
-export const Dark = Template.bind({});
-Dark.args = {
-  mode: "dark",
-};
+export const Default = Template.bind({});

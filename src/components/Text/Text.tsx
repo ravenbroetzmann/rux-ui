@@ -1,8 +1,8 @@
 import React from 'react';
 
-  export interface HeadingProps {}
+  export interface TextProps {}
 
-  const Text: React.FC<HeadingProps> = ({}) => {
+  const Text: React.FC<TextProps> = ({}) => {
     return <div></div>;
   };
 

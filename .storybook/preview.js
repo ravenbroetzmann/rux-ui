@@ -1,5 +1,7 @@
 import "../styles/output.css";
-import RuxContext from "../src/context/RuxContext";
+import RuxContext, { useRuxContext } from "../src/context/RuxContext";
+import { useDarkMode } from "storybook-dark-mode";
+import { useEffect } from "react";
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -10,12 +12,24 @@ export const parameters = {
   },
 };
 
+const StoryBookDarkModeWrapper = ({ children }) => {
+  const darkMode = useDarkMode();
+  const ruxContext = useRuxContext();
+  darkMode ? ruxContext.darkmode.on() : ruxContext.darkmode.off();
+
+  return children;
+};
+
 export const decorators = [
-  (Story) => (
-    <RuxContext>
-      <div className="w-full rounded-lg bg-default-light dark:bg-default-dark p-10 transition-all duration-500">
-        <Story />
-      </div>
-    </RuxContext>
-  ),
+  (Story) => {
+    return (
+      <RuxContext>
+        <StoryBookDarkModeWrapper>
+          <div className="w-full rounded-lg bg-default-light dark:bg-default-dark p-10 ">
+            <Story />
+          </div>
+        </StoryBookDarkModeWrapper>
+      </RuxContext>
+    );
+  },
 ];

@@ -10,7 +10,7 @@ export interface RuxContextValues {
 const context = React.createContext<RuxContextValues | null>(null);
 
 export default function RuxContext({ children }: { children: ReactNode }) {
-  const darkmode = useToggle(true);
+  const darkmode = useToggle(false);
   const contextValue: RuxContextValues = {
     darkmode,
   };

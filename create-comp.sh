@@ -22,7 +22,9 @@ do
 
   COMPONENT_FILE="$NAME.tsx"
   STORIES_FILE="$NAME.stories.tsx"
-  INTERFACE_NAME="${1}Props"
+  PROPSDEF="Props"
+  INTERFACE_NAME=$NAME$PROPSDEF
+  
 
   if [ -d $NAME ]
   then
