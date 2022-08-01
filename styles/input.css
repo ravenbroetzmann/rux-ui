@@ -20,6 +20,11 @@
   font-weight: 400;
 }
 
+.ProseMirror {
+  outline: none;
+  margin-bottom: 1rem;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
