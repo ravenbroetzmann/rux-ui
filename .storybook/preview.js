@@ -25,7 +25,7 @@ export const decorators = [
     return (
       <RuxContext>
         <StoryBookDarkModeWrapper>
-          <div className="w-full rounded-lg bg-default-light dark:bg-default-dark p-10 ">
+          <div className="w-full min-h-screen bg-default-light dark:bg-default-dark p-10 ">
             <Story />
           </div>
         </StoryBookDarkModeWrapper>

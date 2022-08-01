@@ -13,8 +13,8 @@ const Template: ComponentStory<typeof Heading> = (args) => (
 
 export const H1 = Template.bind({});
 H1.args = {
-  type: "h1",
   color: "primary",
+  type: "h1",
   children: "My Name is Heading",
 };
 
@@ -22,16 +22,19 @@ export const H2 = Template.bind({});
 H2.args = {
   ...H1.args,
   type: "h2",
+  color: "neutral",
 };
 
 export const H3 = Template.bind({});
 H3.args = {
   ...H1.args,
   type: "h3",
+  color: "neutral",
 };
 
 export const H4 = Template.bind({});
 H4.args = {
   ...H1.args,
   type: "h4",
+  color: "neutral",
 };

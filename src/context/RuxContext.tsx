@@ -17,11 +17,7 @@ export default function RuxContext({ children }: { children: ReactNode }) {
 
   return (
     <context.Provider value={contextValue}>
-      <div
-        className={`${
-          darkmode.current ? "dark" : ""
-        } transition-all duration-500`}
-      >
+      <div className={`${darkmode.current && "dark"} rux-wrapper`}>
         {children}
       </div>
     </context.Provider>
