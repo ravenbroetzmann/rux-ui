@@ -1,6 +1,6 @@
 import React, { MouseEventHandler } from "react";
 import { color, warning } from "../../types/basic.types";
-
+import "../../../styles/output.css";
 export interface ButtonProps {
   children: string;
   color?: color | warning;

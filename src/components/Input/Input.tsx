@@ -1,10 +1,10 @@
 import React, { ChangeEvent, ChangeEventHandler } from "react";
-
+import "../../../styles/output.css";
 export interface InputProps {
   type?: "text" | "password" | "email";
   name?: string;
   onChange?: ChangeEventHandler<HTMLInputElement>;
-  placeholder: string;
+  placeholder?: string;
   defaultValue?: string;
 }
 
@@ -19,7 +19,7 @@ const Input: React.FC<InputProps> = ({
     <input
       defaultValue={defaultValue || undefined}
       type={type}
-      className="bg-default-light-darker text-neutral-light dark:text-neutral-dark dark:bg-default-dark-lighter border-none rounded-md font-bold outline-none py-4 px-6 w-full"
+      className="bg-default-light-darker text-neutral-light dark:text-neutral-dark dark:bg-default-dark-lighter border-none rounded-md font-bold outline-none py-4 px-6 w-full mb-4"
       placeholder={placeholder}
       name={name}
       onChange={onChange}

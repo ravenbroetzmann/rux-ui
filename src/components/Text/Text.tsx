@@ -1,6 +1,6 @@
 import React from "react";
 import { color } from "../../types/basic.types";
-
+import "../../../styles/output.css";
 export interface TextProps {
   children: string;
   type?: "normal" | "bold";

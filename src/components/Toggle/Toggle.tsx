@@ -2,7 +2,7 @@ import React, { ChangeEventHandler } from "react";
 import { Switch } from "@headlessui/react";
 import { useRuxState } from "../../hooks/useRuxState";
 import Text from "../Text/Text";
-
+import "../../../styles/output.css";
 export interface ToggleProps {
   name?: string;
   label?: string;
