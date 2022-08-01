@@ -30,6 +30,26 @@ module.exports = {
           dark: colors.gray[200],
           light: colors.gray[700],
         },
+        warning: {
+          red: {
+            dark: colors.red[500],
+            light: colors.red[600],
+          },
+        },
+        disabled: {
+          primary: {
+            dark: colors.slate[600],
+            light: colors.slate[400],
+          },
+          neutral: {
+            dark: colors.slate[600],
+            light: colors.slate[400],
+          },
+          default: {
+            dark: colors.slate[600],
+            light: colors.slate[400],
+          },
+        },
       },
       width: {
         input: "25rem",

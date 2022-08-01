@@ -3,8 +3,8 @@ import { color } from "../../types/basic.types";
 
 export interface TextProps {
   children: string;
-  type: "normal" | "bold";
-  color: color;
+  type?: "normal" | "bold";
+  color?: color;
 }
 
 const Text: React.FC<TextProps> = ({ children, type, color }) => {
