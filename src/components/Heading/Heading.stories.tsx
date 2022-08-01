@@ -15,7 +15,7 @@ export const H1 = Template.bind({});
 H1.args = {
   type: "h1",
   color: "primary",
-  children: "My Name is Heading ",
+  children: "My Name is Heading",
 };
 
 export const H2 = Template.bind({});
