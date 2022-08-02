@@ -42,14 +42,12 @@
   },
   "scripts": {
     "watch:storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "watch:tailwind": "tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
     "build:tailwind": "tailwindcss -i ./styles/input.css -o ./styles/output.css",
+    "build:storybook": "yarn build:tailwind && build-storybook",
     "build:rollup": "rollup -c",
-    "build:local": "yarn build:tailwind && yarn build:rollup",
-    "publish:npm": "npm publish --access public",
-    "publish:storybook": "chromatic --project-token=7d607c1f2622",
-    "build:publish": "yarn build:local && yarn publish:npm && yarn publish:storybook"
+    "build": "yarn build:tailwind && yarn build:storybook && yarn build:rollup",
+    "publish:storybook": "chromatic --project-token=7d607c1f2622"
   },
   "dependencies": {},
   "main": "dist/cjs/index.js",
